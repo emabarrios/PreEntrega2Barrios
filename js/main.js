@@ -74,4 +74,4 @@ if (anticipo >= 3000 ){
 }
 
 const total = shop.reduce((acc, el) => acc + el.precio * el.unidades, 0 )
-console.log(`El total a pagar por su turno es de: ${total}`)
+console.log(`El total a pagar por su turno es de: ${total}. Su reserva es de $${anticipo}`)
