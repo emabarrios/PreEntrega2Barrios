@@ -1,22 +1,18 @@
 
-let cliente = prompt("Bienvenido. Es usted cliente? Si / No");
-
+let cliente = prompt("Bienvenido. Es usted cliente? Si / No");/* login usuario*/
 if (cliente.toLowerCase() == "si"){
     usuario = prompt("Ingrese su nombre de usuario");
 }else {
     alert("Debe crear un usuario.")
 }
-
+/* declaro objetos*/
 const servicios = [
     { nombre: "aceite", precio: 5000 },
     { nombre: "filtro", precio: 3000 },
     { nombre: "cubierta", precio: 10000 },
 ];
 
-
-
 let shop = []
-
 let seleccion = prompt (`Hola ${usuario} deseas reservar algun turno de service? si o no`)
 
 while(seleccion != "si" && seleccion != "no"){
@@ -37,7 +33,6 @@ if(seleccion == "si"){
 while(seleccion != "no"){
     let servicio = prompt("Agregá un service para reservar tu turno")
     let precio = 0
-
     if(servicio == "aceite" || servicio == "filtro" || servicio == "cubierta"){
         switch(servicio){
             case "aceite":
@@ -54,7 +49,6 @@ while(seleccion != "no"){
             break;
         }
     let unidades = parseInt(prompt("Cuantas unidades querés reservar?"))
-
     shop.push({servicio, unidades, precio})
     }
     else {
@@ -71,8 +65,8 @@ while(seleccion != "no"){
     }
 }
 
+/* anticipo */
 let anticipo = prompt(`${usuario} Debes abonar un anticipo de 3000 pesos`);
-
 if (anticipo >= 3000 ){
     alert(`Gracias ${usuario}! llegará un correo a tu casilla con la información de tu turno asignado.`)
 }else {
